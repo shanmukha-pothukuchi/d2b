@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+</head>
+<body onload="myInput.focus()">
+    <input id="myInput">
+    <button id="myBtn" onclick="toBinary(myInput.value)">Go!</button>
+    <h1 id="resultValue"></h1>
+
+    <script>
+        var input = document.getElementById("myInput");
+        input.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           document.getElementById("myBtn").click();
+          }
+        });
+    </script>    
+</body>
+</html>
